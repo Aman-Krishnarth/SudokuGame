@@ -1,5 +1,6 @@
 {
   "name": "sudoku",
+  "homepage": "https://aman-krishnarth.github.io/SudokuGame/",
   "private": true,
   "version": "0.0.0",
   "type": "module",

@@ -8,15 +8,15 @@ import Game from './Pages/Game.jsx'
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/SudokuGame/",
     element: <App/>,
     children: [
       {
-        path: "",
+        path: "/SudokuGame/",
         element: <Game/>
       },
       {
-        path: "About",
+        path: "/SudokuGame/About",
         element: <About/>
       }
     ]
