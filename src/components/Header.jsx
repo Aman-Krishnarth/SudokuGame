@@ -31,7 +31,7 @@ function Header() {
                     alt=""
                     className=" h-24 w-24"
                 />
-                <Link to="/">
+                <Link to="/SudokuGame/">
                     <button
                         className={`text-4xl hover:rounded-2xl hover:bg-sky-700 p-2  transition-colors ease-in-out duration-200 rounded-xl hover:scale-105 font-extrabold
                         `}
@@ -39,7 +39,7 @@ function Header() {
                         Game
                     </button>
                 </Link>
-                <Link to="/About">
+                <Link to="/SudokuGame/About">
                     <button
                         className={` text-4xl hover:rounded-2xl hover:bg-sky-700 p-2  transition-colors ease-in-out duration-200 rounded-xl hover:scale-105 font-extrabold`}
                     >
