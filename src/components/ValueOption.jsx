@@ -12,7 +12,7 @@ function ValueOption({value}){
 
     return (
         <button
-        className="bg-orange-600 p-2 hover:bg-zinc-400 hover:text-gray-100 transition-all ease-in-out duration-200 hover:scale-110 font-semibold text-2xl box-border"
+        className=" bg-amber-500 p-2 hover:bg-zinc-400 hover:text-gray-100 transition-all ease-in-out duration-200 hover:scale-110 font-semibold text-2xl box-border"
         onClick={handleClick}
         value={value}
         >{value}</button>

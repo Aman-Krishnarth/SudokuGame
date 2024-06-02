@@ -6,16 +6,15 @@ import ValueOption from "../components/ValueOption";
 import StopWatch from "../components/StopWatch";
 import useTheme from "../Context/context";
 
+// Footer mein links add crow
+// update karne ke liye edit crow
 // useRef leke boxes ka count rakho
-// jeetne pe ek aur div banao
 // jisse solve nai hoga uske liye ek solve karne ka button banao jo ki solve kar ke de dega
-// debug can add function
-// css resolve crow brother
 
 const Game = () => {
     const boxesFilled = useRef(0);
 
-    const { themeMode, fontColor } = useTheme();
+    const { themeMode, fontColor, isDarkTheme } = useTheme();
 
     const [selectedValue, setSelectedValue] = useState(-1);
 
@@ -77,12 +76,10 @@ const Game = () => {
     function handlePosition(row, col, selectedValue){
         console.log("HANDLE POSITION");
         console.log(row,col,selectedValue)
-        if(+gameButtons[row*9 + col].getAttribute("id") === -1){
             if(canAdd(row,col,selectedValue)){
                 updateGame(row,col,selectedValue);
                 boxesFilled.current++;
             }
-        }
         setSelectedValue(-1);
     }
 
@@ -179,7 +176,7 @@ const Game = () => {
                 <StopWatch  />
             </div>
 
-            <div className={`bg-yellow-300 grid grid-rows-1 w-1/2 m-auto ${fontColor}`}>
+            <div className={` bg-zinc-400 grid grid-rows-1 w-1/2 m-auto ${fontColor}`}>
                 <GameBox index={0} />
                 <GameBox index={9} />
                 <GameBox index={18} />

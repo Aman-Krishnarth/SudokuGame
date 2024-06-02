@@ -19,7 +19,7 @@ function GameButton({value, id}){
 
     return (
 
-        <div className="bg-yellow-300 text-center gameButtons border-2 border-solid border-black min-h-10 cursor-pointer font-bold text-2xl box-border hover:bg-red-500 transition ease-in-out" onClick={handleClick} value = {value} id = {id}>  </div>
+        <div className="text-center gameButtons border-2 border-solid border-black min-h-10 cursor-pointer font-bold text-2xl box-border hover:bg-red-500 transition ease-in-out" onClick={handleClick} value = {value} id = {id}>  </div>
 
     )
 
