@@ -87,7 +87,7 @@ const Game = () => {
                 }
             }
             else{
-                if(showToasts){
+                if(showToasts && selectedValue!=-1){
                     toast.error("Value not added")
                 }
             }
