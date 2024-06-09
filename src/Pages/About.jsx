@@ -8,6 +8,7 @@ const About = ()=>{
     return (
         <>
         
+        <div className=" animate-fadeIn">
         <h1 className={`p-2 text-center font-bold text-2xl ${fontColor}`}>About Sudoku Game</h1>
         <hr
         className="w-1/2 mx-auto"
@@ -26,6 +27,7 @@ const About = ()=>{
 
         <p className={`p-2 mx-auto my-2 w-3/5 font-semibold ${fontColor}`}>Sudoku has also been adapted into various forms, including digital versions for computers, smartphones, and tablets. These digital adaptations often include features like hint systems, automatic error checking, and different difficulty levels to cater to players of all skill levels. Additionally, Sudoku competitions and tournaments are held regularly, further showcasing its enduring appeal.</p>
 
+        </div>
         </>
     )
 }
