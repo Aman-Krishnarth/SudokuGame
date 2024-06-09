@@ -10,19 +10,4 @@
         box-sizing: border-box;
     }
 
-    html,body{
-        /* background-color: #212121;   */
-        /* height: 100vh; */
-        /* width: 100vw;   */
-    }
-
-    .container{
-        /* border: 2px solid white;
-        height: 100vh;
-        width: 100vw;
-        display: grid;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-columns: 1fr; */
-    }
-
 }

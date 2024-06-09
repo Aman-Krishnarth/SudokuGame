@@ -4,17 +4,15 @@ import GameBox from "../components/GameComponents/GameBox";
 import { GameContextProvider } from "../Context/gameContext";
 import ValueOption from "../components/ValueOption";
 import StopWatch from "../components/StopWatch";
-import useTheme from "../Context/context";
+import useTheme from '../Context/context'
+import { toast } from "react-toastify";
 
-// Footer mein links add crow
-// update karne ke liye edit crow
-// useRef leke boxes ka count rakho
-// jisse solve nai hoga uske liye ek solve karne ka button banao jo ki solve kar ke de dega
+
 
 const Game = () => {
     const boxesFilled = useRef(0);
 
-    const { themeMode, fontColor, isDarkTheme } = useTheme();
+    const { themeMode, fontColor, isDarkTheme } = useTheme()
 
     const [selectedValue, setSelectedValue] = useState(-1);
 
@@ -23,6 +21,8 @@ const Game = () => {
     const [playing, setPlaying] = useState(false);
 
     const [boxes, setBoxes] = useState(0)
+
+    const [showToasts, setShowToasts] = useState(false)
 
 
     useEffect(() => {
@@ -49,6 +49,7 @@ const Game = () => {
         for(let c =0 ; c<9; c++){
 
             if(+gameButtons[row*9 + c].getAttribute("id") === selectedValue){
+                
                 return false;
             }
 
@@ -59,10 +60,12 @@ const Game = () => {
         for(let r =0 ; r<9; r++){
 
             if(+gameButtons[r*9 + col].getAttribute("id") === selectedValue){
+                
                 return false;
             }
 
         }
+      
         return true;
 
     }
@@ -79,6 +82,14 @@ const Game = () => {
             if(canAdd(row,col,selectedValue)){
                 updateGame(row,col,selectedValue);
                 boxesFilled.current++;
+                if(showToasts){
+                    toast.success("Value added")
+                }
+            }
+            else{
+                if(showToasts){
+                    toast.error("Value not added")
+                }
             }
         setSelectedValue(-1);
     }
@@ -106,13 +117,13 @@ const Game = () => {
                         updateGame(row,col,v)
                         i++;
                         boxesFilled.current++;
+                        // alert("value added")
                     }
-
                 }
 
             }
 
-            boxesFilled.current = 81;
+            setShowToasts(true)
         }
         else{
             console.log("GAME BAND HO GAYA")
